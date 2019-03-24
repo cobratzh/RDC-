@@ -1,7 +1,7 @@
-RDC后台组第一次周记：2019年3月24日
-//一周总结
+#RDC后台组第一次周记：2019年3月24日#
+#一周总结#
 这周开始接触MySQL和JavaFX的使用，学习了MySQL的基本的增删查补操作和在Java中的具体实现方式，还有基本了解了JavaFX的UI基本结构和设计方法，如Stage窗体，
-。
+Scene界面，Pane布局，Button按钮等。同时也了解了MVC软件设计思想，主要内容是将客户端与服务端分开管理，中间通过controller。
 
 JDBC的笔记
 1.	定义：Java的MySQL接口
@@ -12,7 +12,7 @@ JDBC的笔记
   2)	创建方法：Connection conn = DriverManager.getConnection(
             "jdbc:mysql://(主机名):(端口)/(数据库名)?useUnicode=true&characterEncoding=utf-8&useSSL=false", 
             "(用户名)", 
-      "(密码)");
+            "(密码)");
   3)	方法 
     A)	createStatement()：创建数据库的语句接口
     B)	close()：关闭接口
@@ -45,4 +45,12 @@ JDBC的笔记
   2)	方法
     A)	load(Reader in)：加载配置文件in
     B)	getProperty(String key)：获得key对应的字符串
+
+#存在问题#
+由于最近身体稍微有点不适，学习进度感觉有点慢，Java的异常处理和IO还需要进行学习，以及JavaFX，需要尽快补充知识开始着手构建项目阶段
+
+#下周规划#
+3.25-3.26：JavaFX的学习
+3.27：Java异常处理和IO
+3.28-3.31：开始了解管理系统的大概框架，并开始着手项目的搭建
 
