@@ -1,0 +1,48 @@
+RDC后台组第一次周记：2019年3月24日
+//一周总结
+这周开始接触MySQL和JavaFX的使用，学习了MySQL的基本的增删查补操作和在Java中的具体实现方式，还有基本了解了JavaFX的UI基本结构和设计方法，如Stage窗体，
+。
+
+JDBC的笔记
+1.	定义：Java的MySQL接口
+2.	加载驱动：Class.forName(com.mysql.jdbc.Driver);
+3.	类
+一)	Connection
+  1)	定义：数据库接口
+  2)	创建方法：Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://(主机名):(端口)/(数据库名)?useUnicode=true&characterEncoding=utf-8&useSSL=false", 
+            "(用户名)", 
+      "(密码)");
+  3)	方法 
+    A)	createStatement()：创建数据库的语句接口
+    B)	close()：关闭接口
+二)	Statement
+  1)	定义：命令行语句的接口
+  2)	创建方法：Statement stmt = conn.createStatement();
+  3)	方法
+    A)	executeQuery(String queryStatement)：执行查询语句
+    B)	execute(String statement)：执行普通语句
+    C)	executeUpdate(String updateStatement)：执行更新语句（删除/插入/更改）
+  4)	语句中表示字符串用‘’
+三)	ResultSet
+  1)	定义：保存数据记录的结果集（输入语句后的结果）
+  2)	创建方法：ResultSet rs = stmt.executeQuery(String queryStatement);
+  3)	方法
+    A)	next()：下一行结果集
+    B)	getInt(int columnIndex)：获得列索引为columnIndex的int数据(getString,getFloat同理)
+    C)	getInt(String columnIndex)：获得列名为columnIndex的int数据(getString,getFloat同理)
+  4)	每一个行结果集对应的列元素都有索引(顺序根据语句)
+四)	ResultSetMetaData
+  1)	定义：结果集元数据（列名称，列类型等）
+五)	DatabaseSetMetaData
+  1)	定义：数据元数据（数据库名称，版本等）
+六)	DriverManeger
+  1)	定义：数据库连接的一个工厂
+  2)	方法
+    A)	getConnection(String url, String user, String password)：获得数据库接口
+七)	Properties
+  1)	定义：配置文件
+  2)	方法
+    A)	load(Reader in)：加载配置文件in
+    B)	getProperty(String key)：获得key对应的字符串
+
